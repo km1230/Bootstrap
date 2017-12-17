@@ -1,2 +1,2 @@
-# Bootstrap
+# conFusion
 HKUST Bootstrap exercise
