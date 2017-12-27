@@ -37,3 +37,10 @@ body{
 .navbar-inverse{
 	background-color: black;
 }
+
+.tab-content{
+	border: solid;
+	border-width: 0px 1px 1px 1px;
+	border-color: #ddd;
+	padding: 10px;
+}
