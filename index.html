@@ -66,6 +66,76 @@
         </div>
     </div>
 
+    <div class='modal fade' id='Reserve' role='dialog'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <div class='modal-title'>
+                        <h2>Reserve a Table</h2>
+                    </div>
+                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                </div>
+                
+                <div class='modal-body'>
+                    <form>
+                        <dl class='row form-group'>
+                            <dt class='col-12 col-sm-2'>
+                                <label for='number-of-guests'>Number of Guests</label>
+                            </dt>
+                            <dd class='col-12 col-sm-10'>
+                                <label class='radio-inline'><input type='radio'>1&nbsp;&nbsp;&nbsp;</label>
+                                <label class='radio-inline'><input type='radio'>2&nbsp;&nbsp;&nbsp;</label>
+                                <label class='radio-inline'><input type='radio'>3&nbsp;&nbsp;&nbsp;</label>
+                                <label class='radio-inline'><input type='radio'>4&nbsp;&nbsp;&nbsp;</label>
+                                <label class='radio-inline'><input type='radio'>5&nbsp;&nbsp;&nbsp;</label>
+                                <label class='radio-inline'><input type='radio'>6&nbsp;&nbsp;&nbsp;</label>
+                            </dd>
+                        </dl>
+
+                        <dl class='row form-group'>
+                            <dt class='col-12 col-sm-2'>
+                                <label for='section'>Section</label>
+                            </dt>
+                            <dd class='col-12 col-sm-10'>
+                                <div class='btn-group' data-toggle='buttons'>
+                                    <label for='non-smoking' class='btn btn-success active'><input type='radio'>Non-Smoking</label>
+                                    <label for='smoking' class='btn btn-danger'><input type='radio'>Smoking</label>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl class='row form-group'>
+                            <dt class='col-12 col-sm-2'>
+                                <label for='date-and-time'>Date and Time</label>
+                            </dt>
+                            <dd class='col-12 col-sm-8'>
+                                <div class='row'>
+                                    <div class='input-group col-12 col-sm-6'>
+                                        <div class='input-group-addon'><i class='fa fa-calendar'></i></div>
+                                        <input type='text' class='form-control' placeholder="Date">
+                                    </div>
+                                    <div class='input-group col-12 col-sm-6'>
+                                        <div class='input-group-addon'><i class='fa fa-clock-o'></i></div>
+                                        <input type='text' class='form-control' placeholder='Time'>
+                                    </div>                                    
+                                </div>
+                            </dd>
+                            <dd class='col col-sm-2'></dd>
+                        </dl>
+
+                        <dl class='row'>
+                            <dt class='col col-sm-2'></dt>
+                            <dd class='col-12 col-sm-10'>
+                                <button class='btn btn-secondary' type='button' data-dismiss='modal'>Cancel</button>
+                                <button class='btn bg-primary text-white' type='submit'>Reserve</button>
+                            </dd>
+                        </dl>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class='jumbotron'>
         <div class='container'>
             <div class='row row-header'>
@@ -77,13 +147,64 @@
                     <img src='./img/logo.png' class='img-fluid'>
                 </div>
                 <div class='col-12 col-sm-3 align-self-center'>
-                    <a href='#Reserve' class='btn btn-block btn-sm bg-warning text-white' data-toggle='tooltip' data-html='true' title='Or Call Us at<br><strong>+852 12345678</strong>' data-placement='bottom'>Reserve Table</a>
+                    <a class='btn btn-block btn-sm bg-warning text-white' data-toggle='modal' data-target='#Reserve'>Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class='container'>
+        <div class='row row-content'>
+            <div class='col'>
+                <div id='mycarousel' class='carousel slide' data-ride='carousel'>
+                    <div class="carousel-inner" role="listbox">
+                        
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>
+                                    Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span>
+                                </h2>
+                                <p class='hidden-xs-down'>
+                                A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class='carousel-item'>
+                            <img class='d-block img-fluid' src='img/buffet.png' alt='buffet'>
+                            <div class='carousel-caption d-none d-md-block'>
+                                <h2>Weekend Grand Buffet <span class='badge badge-danger'>NEW</span></h2>
+                                <p class='hidden-xs-down'>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>
+                            </div>
+                        </div>
+                        
+                        <div class='carousel-item'>
+                            <img class='d-block img-fluid' src='img/alberto.png' alt='alberto'>
+                            <div class='carousel-caption d-none d-md-block'>
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class='hidden-xs-down'>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <ol class='carousel-indicators'>
+                        <li data-target='#mycarousel' data-slide-to='0' class='active'></li>
+                        <li data-target='#mycarousel' data-slide-to='1'></li>
+                        <li data-target='#mycarousel' data-slide-to='2'></li>
+                    </ol>
+                    <a class='carousel-control-prev' href='#mycarousel' data-slide='prev' role='button'>
+                        <span class='carousel-control-prev-icon'></span>
+                    </a>
+                    <a class='carousel-control-next' href='#mycarousel' data-slide='next' role='button'>
+                        <span class='carousel-control-next-icon'></span>
+                    </a>
+                </div>
+            </div>    
+        </div>
+
         <div class='row row-content align-items-center'>
             <div class='col-sm-4 col-md-3 flex-last'>
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -131,54 +252,6 @@
             </div>
         </div>
 
-        <div class='row row-content' id='Reserve'>
-            <div class='col col-sm-2'></div>
-            <div class='col-12 col-sm-8'>
-                <div class='card'>
-                    <div class='card-header text-white bg-warning'><h2>Reserve a Table</h2></div>
-                    <form class='card-block'>
-                        <dl class='row form-group'>
-                            <dt class='col-12 col-sm-2'>
-                                <label for='number-of-guests'>Number of Guests</label>
-                            </dt>
-                            <dd class='col-12 col-sm-10'>
-                                <label class='radio-inline'><input type='radio'>1&nbsp;&nbsp;&nbsp;</label>
-                                <label class='radio-inline'><input type='radio'>2&nbsp;&nbsp;&nbsp;</label>
-                                <label class='radio-inline'><input type='radio'>3&nbsp;&nbsp;&nbsp;</label>
-                                <label class='radio-inline'><input type='radio'>4&nbsp;&nbsp;&nbsp;</label>
-                                <label class='radio-inline'><input type='radio'>5&nbsp;&nbsp;&nbsp;</label>
-                                <label class='radio-inline'><input type='radio'>6&nbsp;&nbsp;&nbsp;</label>
-                            </dd>
-                        </dl>
-                        <dl class='row form-group'>
-                            <dt class='col-12 col-sm-2'>
-                                <label for='date-and-time'>Date and Time</label>
-                            </dt>
-                            <dd class='col-12 col-sm-8'>
-                                <div class='row'>
-                                    <div class='input-group col-12 col-sm-6'>
-                                        <div class='input-group-addon'><i class='fa fa-calendar'></i></div>
-                                        <input type='text' class='form-control' placeholder="Date">
-                                    </div>
-                                    <div class='input-group col-12 col-sm-6'>
-                                        <div class='input-group-addon'><i class='fa fa-clock-o'></i></div>
-                                        <input type='text' class='form-control' placeholder='Time'>
-                                    </div>                                    
-                                </div>
-                            </dd>
-                            <dd class='col col-sm-2'></dd>
-                        </dl>
-                        <dl class='row'>
-                            <dt class='col col-sm-2'></dt>
-                            <dd class='col-12 col-sm-8'>
-                                <button class='btn bg-primary text-white' type='submit'>Reserve</button>
-                            </dd>
-                        </dl>
-                    </form>
-                </div>
-            </div>
-            <div class='col col-sm-2'></div>
-        </div>
     </div>
 
     <footer class='footer'>
@@ -226,11 +299,6 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
